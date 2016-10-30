@@ -130,3 +130,11 @@ DGL_LIBS  = -lopengl32 -lgdi32
 endif
 
 # --------------------------------------------------------------
+# Set up some xpiling stuff
+ifeq ($(MINGW32),true)
+#BASE_FLAGS += --sysroot=/usr/i686-w64-mingw32/ -I/usr/lib/gcc/i686-w64-mingw32/4.8/include/
+endif
+
+ifeq ($(MINGW64),true)
+#BASE_FLAGS += --sysroot=/usr/x86_64-w64-mingw32/ -I/usr/x86_64-w64-mingw32/include/ -I/usr/lib/gcc/x86_64-w64-mingw32/4.8/include/ -I/usr/include/c++/4.8/ -I/usr/include/c++/4.8/x86_64-w64-mingw32/ -I/usr/include
+endif
